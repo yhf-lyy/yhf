@@ -1,14 +1,14 @@
 {
-  "name": "server",
+  "name": "xingyi-admission-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "兴艺中学招生系统后端",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "engines": {
+    "node": ">=18.0"
+  },
   "dependencies": {
     "better-sqlite3": "^12.11.1",
     "cors": "^2.8.6",
