@@ -1232,6 +1232,136 @@ ul { list-style: none; }
   gap: 12px;
 }
 
+/* ===== Achievements Section ===== */
+.achievements {
+  padding: 120px 0;
+  background: var(--bg);
+}
+
+.achievements-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.achievements-header .section-label {
+  justify-content: center;
+}
+
+.achievements-header .section-title {
+  margin-bottom: 12px;
+}
+
+.achievements-slogan {
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 48px;
+  letter-spacing: 0.05em;
+}
+
+.achievements-slogan::before,
+.achievements-slogan::after {
+  content: '「';
+  color: var(--gold);
+  font-size: 1.3rem;
+}
+
+.achievements-slogan::after {
+  content: '」';
+}
+
+.achievements-highlight {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.achievements-highlight-item {
+  text-align: center;
+}
+
+.achievements-highlight-num {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.achievements-highlight-num span {
+  font-size: 1.2rem;
+  color: var(--gold);
+}
+
+.achievements-highlight-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.achievements-table-wrap {
+  background: var(--bg2);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.achievements-table-title {
+  padding: 20px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  text-align: center;
+}
+
+.achievements-table-wrap .table-wrap {
+  max-height: 600px;
+}
+
+.achievements-table-wrap table thead th {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: white;
+  border-bottom: none;
+  font-size: 0.8rem;
+}
+
+.achievements-table-wrap table tbody tr:hover {
+  background: var(--accent-light);
+}
+
+.achievements-table-wrap table tbody td {
+  text-align: center;
+}
+
+.improve-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #b45309;
+}
+
+.improve-badge.top {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: white;
+  font-size: 0.85rem;
+}
+
+.achievements-footer {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+}
+
 .footer-col-links a {
   font-size: 0.85rem;
   color: rgba(255,255,255,0.5);
@@ -1458,6 +1588,7 @@ ul { list-style: none; }
       <a href="#programs">招生项目</a>
       <a href="#facilities">校园设施</a>
       <a href="#advantages">办学优势</a>
+      <a href="#achievements">教学成果</a>
       <a href="#enrollment">报名咨询</a>
     </div>
     <a href="#enrollment" class="nav-cta">在线报名</a>
@@ -1719,6 +1850,72 @@ ul { list-style: none; }
   </div>
 </section>
 
+<!-- Achievements Section -->
+<section class="achievements" id="achievements">
+  <div class="container">
+    <div class="achievements-header">
+      <div class="section-label reveal">教学成果</div>
+      <h2 class="section-title reveal reveal-delay-1">2026年高考提分喜报</h2>
+    </div>
+    <div class="achievements-slogan reveal reveal-delay-1">送一个孩子来兴艺，还一个人才给社会</div>
+
+    <div class="achievements-highlight reveal reveal-delay-2">
+      <div class="achievements-highlight-item">
+        <div class="achievements-highlight-num">最高提分<span>164</span>分</div>
+        <div class="achievements-highlight-label">龙金艺 同学</div>
+      </div>
+      <div class="achievements-highlight-item">
+        <div class="achievements-highlight-num">人均提分<span>106</span>分</div>
+        <div class="achievements-highlight-label">18人平均</div>
+      </div>
+      <div class="achievements-highlight-item">
+        <div class="achievements-highlight-num">全员提升<span>80+</span>分</div>
+        <div class="achievements-highlight-label">100%进步</div>
+      </div>
+    </div>
+
+    <div class="achievements-table-wrap reveal reveal-delay-3">
+      <div class="achievements-table-title">2026年高三学子提分榜（部分）</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>姓名</th>
+              <th>报名科类</th>
+              <th>2026高考成绩</th>
+              <th>进口成绩</th>
+              <th>成绩提升</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td><strong>龙金艺</strong></td><td>物理类</td><td><strong>637</strong></td><td>473</td><td><span class="improve-badge top">+164</span></td></tr>
+            <tr><td>2</td><td><strong>蓬建志</strong></td><td>历史类</td><td><strong>589</strong></td><td>433</td><td><span class="improve-badge top">+156</span></td></tr>
+            <tr><td>3</td><td>郭玉涵</td><td>历史类</td><td>489</td><td>353</td><td><span class="improve-badge">+136</span></td></tr>
+            <tr><td>4</td><td>陆虹鑫</td><td>物理类</td><td>466</td><td>347</td><td><span class="improve-badge">+119</span></td></tr>
+            <tr><td>5</td><td>赵财富</td><td>历史类</td><td>459</td><td>341</td><td><span class="improve-badge">+118</span></td></tr>
+            <tr><td>6</td><td>沈敏敏</td><td>历史类</td><td>456</td><td>344</td><td><span class="improve-badge">+112</span></td></tr>
+            <tr><td>7</td><td>陈桂花</td><td>历史类</td><td>433</td><td>321</td><td><span class="improve-badge">+112</span></td></tr>
+            <tr><td>8</td><td>林玉巧</td><td>历史类</td><td>433</td><td>328</td><td><span class="improve-badge">+105</span></td></tr>
+            <tr><td>9</td><td>王帅</td><td>物理类</td><td>444</td><td>339</td><td><span class="improve-badge">+105</span></td></tr>
+            <tr><td>10</td><td>杨庆元</td><td>物理类</td><td>440</td><td>337</td><td><span class="improve-badge">+103</span></td></tr>
+            <tr><td>11</td><td>肖勋茂</td><td>物理类</td><td>452</td><td>350</td><td><span class="improve-badge">+102</span></td></tr>
+            <tr><td>12</td><td>陈秀文</td><td>物理类</td><td>435</td><td>334</td><td><span class="improve-badge">+101</span></td></tr>
+            <tr><td>13</td><td>唐贵松</td><td>物理类</td><td>446</td><td>345</td><td><span class="improve-badge">+101</span></td></tr>
+            <tr><td>14</td><td>林粉</td><td>历史类</td><td>426</td><td>326</td><td><span class="improve-badge">+100</span></td></tr>
+            <tr><td>15</td><td>皮磊</td><td>物理类</td><td>425</td><td>331</td><td><span class="improve-badge">+94</span></td></tr>
+            <tr><td>16</td><td>李金飞</td><td>物理类</td><td>420</td><td>337</td><td><span class="improve-badge">+83</span></td></tr>
+            <tr><td>17</td><td>黄佑婷</td><td>物理类</td><td>412</td><td>331</td><td><span class="improve-badge">+81</span></td></tr>
+            <tr><td>18</td><td>杨景风</td><td>历史类</td><td>403</td><td>323</td><td><span class="improve-badge">+80</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="achievements-footer reveal reveal-delay-4">金榜题名</div>
+  </div>
+</section>
+
 <!-- Enrollment Section -->
 <section class="enrollment" id="enrollment">
   <div class="container">
@@ -1879,6 +2076,7 @@ ul { list-style: none; }
           <a href="#programs">招生项目</a>
           <a href="#facilities">校园设施</a>
           <a href="#advantages">办学优势</a>
+          <a href="#achievements">教学成果</a>
           <a href="#enrollment">报名咨询</a>
         </div>
       </div>
