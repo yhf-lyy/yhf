@@ -1783,8 +1783,10 @@ ul { list-style: none; }
       <div class="contact-form-wrapper reveal reveal-delay-2">
         <h3 class="contact-form-title">在线预约咨询</h3>
         <p class="contact-form-desc">填写以下信息提交，招生老师会尽快与您联系</p>
-        <form name="enrollment" netlify method="POST" action="/success.html" id="consultForm">
+        <form name="enrollment" netlify="true" method="POST" data-netlify="true" id="consultForm">
           <input type="hidden" name="form-name" value="enrollment">
+          <input type="hidden" name="bot-field" />
+          <div netlify-recaptcha></div>
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">学生姓名 *</label>
