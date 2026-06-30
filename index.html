@@ -1782,8 +1782,9 @@ ul { list-style: none; }
 
       <div class="contact-form-wrapper reveal reveal-delay-2">
         <h3 class="contact-form-title">在线预约咨询</h3>
-        <p class="contact-form-desc">填写以下信息，我们将尽快与您联系</p>
-        <form id="consultForm" onsubmit="handleSubmit(event)">
+        <p class="contact-form-desc">填写以下信息提交，招生老师会尽快与您联系</p>
+        <form name="enrollment" netlify method="POST" action="/success.html" id="consultForm">
+          <input type="hidden" name="form-name" value="enrollment">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">学生姓名 *</label>
@@ -1813,17 +1814,17 @@ ul { list-style: none; }
               <label class="form-label">报名项目 *</label>
               <select name="program" class="form-select" required>
                 <option value="">请选择报名项目</option>
-                <option value="freshman">高一新生</option>
-                <option value="junior-repeat">初三复读生</option>
-                <option value="senior-repeat">高三复读生</option>
+                <option value="高一新生">高一新生</option>
+                <option value="初三复读生">初三复读生</option>
+                <option value="高三复读生">高三复读生</option>
               </select>
             </div>
             <div class="form-group">
               <label class="form-label">希望联系方式</label>
               <select name="contact_pref" class="form-select">
-                <option value="phone">电话</option>
-                <option value="wechat">微信</option>
-                <option value="qq">QQ</option>
+                <option value="电话">电话</option>
+                <option value="微信">微信</option>
+                <option value="QQ">QQ</option>
               </select>
             </div>
           </div>
@@ -1833,11 +1834,6 @@ ul { list-style: none; }
           </div>
           <button type="submit" class="form-submit">提交预约咨询</button>
         </form>
-        <div id="formSuccess" style="display:none;text-align:center;padding:32px 0">
-          <div style="font-size:3rem;margin-bottom:16px">&#9989;</div>
-          <h3 style="font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:8px">预约成功</h3>
-          <p style="font-size:0.9rem;color:var(--muted)">我们将在1-3个工作日内与您联系，请保持电话畅通。</p>
-        </div>
       </div>
     </div>
   </div>
@@ -2029,30 +2025,6 @@ function copyText(text) {
   }
 })();
 
-// Form handler
-function handleSubmit(e) {
-  e.preventDefault();
-  var form = document.getElementById('consultForm');
-  var formData = new FormData(form);
-  var data = Object.fromEntries(formData);
-  var success = document.getElementById('formSuccess');
-
-  fetch('/api/enroll', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-  })
-  .then(function(r) { return r.json(); })
-  .then(function(res) {
-    form.style.display = 'none';
-    success.style.display = 'block';
-  })
-  .catch(function() {
-    // 后端未连接时也显示成功（兼容静态模式）
-    form.style.display = 'none';
-    success.style.display = 'block';
-  });
-}
 </script>
 
 </body>

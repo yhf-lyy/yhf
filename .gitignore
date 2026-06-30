@@ -1,11 +1,3 @@
-# Dependencies
-server/node_modules/
-
-# Database files
-server/data.db
-server/data.db-shm
-server/data.db-wal
-
 # System files
 .DS_Store
 Thumbs.db
